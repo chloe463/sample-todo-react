@@ -1,28 +1,73 @@
+body {
+  background-color: #eaeaea;
+}
+
 .App {
+  /* text-align: center; */
+  display: block;
+  width: 75%;
+  margin: auto;
+}
+
+
+.TodoInput {
+  background-color: #ffffff;
+  padding: 24px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.TodoInput__inputText {
+  width: 80%;
+  margin: 0 8px;
+  height: 24px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  font-size: 12pt;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.TodoInput__inputText:focus {
+  border-bottom: 1px solid orangered;
 }
 
-.App-title {
-  font-size: 1.5em;
+.TodoInput__submitButton {
+  outline: none;
+  display: inline-block;
+  background-color: transparent;
+  color: rgb(89,89,89);
+  border: none;
+  border-radius: 2px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  font-size: 10pt;
 }
 
-.App-intro {
-  font-size: large;
+.TodoInput__submitButton:hover {
+  background-color: #cccccc;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.TodoList {
+  display: block;
+  margin-top: 24px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+}
+
+.TodoList__inputCheckbox {
+  margin-right: 8px;
+}
+
+.TodoItems {
+  list-style: none;
+  padding: 0 12px;
+}
+
+.TodoItem {
+  display: flex;
+  justify-content: space-between;
+  line-height: 32px;
+  padding: 8px;
+  border-bottom: 1px solid #eaeaea;
 }
