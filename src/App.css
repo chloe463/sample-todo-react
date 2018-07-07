@@ -9,45 +9,6 @@ body {
   margin: auto;
 }
 
-
-.TodoInput {
-  background-color: #ffffff;
-  padding: 24px;
-  box-shadow: 0 2px 5px rgba(0,0,0,.25);
-  text-align: center;
-}
-
-.TodoInput__inputText {
-  width: 80%;
-  margin: 0 8px;
-  height: 24px;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #cccccc;
-  font-size: 12pt;
-}
-
-.TodoInput__inputText:focus {
-  border-bottom: 1px solid orangered;
-}
-
-.TodoInput__submitButton {
-  outline: none;
-  display: inline-block;
-  background-color: transparent;
-  color: rgb(89,89,89);
-  border: none;
-  border-radius: 2px;
-  padding: 8px 12px;
-  text-transform: uppercase;
-  font-size: 10pt;
-}
-
-.TodoInput__submitButton:hover {
-  background-color: #cccccc;
-  cursor: pointer;
-}
-
 .TodoList {
   display: block;
   margin-top: 24px;

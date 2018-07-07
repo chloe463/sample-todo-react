@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
+import TodoInput from './TodoInput/TodoInput';
+
 class Todo {
   constructor(text) {
     this.id       = text + (new Date()).getTime();
@@ -72,14 +74,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <form className="TodoInput" onSubmit={this.handleSubmit}>
-          <input type="text"
-            placeholder="TODO"
-            className="TodoInput__inputText"
-            value={this.state.inputText}
-            onInput={this.handleInput}/>
-          <button type="submit" className="TodoInput__submitButton">Submit</button>
-        </form>
+        <TodoInput
+          value={this.state.inputText}
+          onChange={this.handleInput}
+          onSubmit={this.handleSubmit}
+        />
 
         <div className="TodoList">
           <ul className="TodoItems">
