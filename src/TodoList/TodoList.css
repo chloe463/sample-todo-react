@@ -1,0 +1,23 @@
+.TodoList {
+  display: block;
+  margin-top: 24px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+}
+
+.TodoList__inputCheckbox {
+  margin-right: 8px;
+}
+
+.TodoItems {
+  list-style: none;
+  padding: 0 12px;
+}
+
+.TodoItem {
+  display: flex;
+  justify-content: space-between;
+  line-height: 32px;
+  padding: 8px;
+  border-bottom: 1px solid #eaeaea;
+}

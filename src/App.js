@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import TodoInput from './TodoInput/TodoInput';
+import TodoList from './TodoList/TodoList';
 
 class Todo {
   constructor(text) {
@@ -80,24 +81,11 @@ class App extends Component {
           onSubmit={this.handleSubmit}
         />
 
-        <div className="TodoList">
-          <ul className="TodoItems">
-            {this.state.todos.map((todo, i) => {
-              return (
-                <li className="TodoItem" key={todo.id}>
-                  <label>
-                    <input type="checkbox"
-                      className="TodoList__inputCheckbox"
-                      checked={todo.finished}
-                      onChange={_ => this.updateTodoStatus(todo)} />
-                    {todo.text}
-                  </label>
-                  <span onClick={_ => this.deleteTodo(todo)}>[delete]</span>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <TodoList
+          todos={this.state.todos}
+          updateTodoStatus={this.updateTodoStatus}
+          deleteTodo={this.deleteTodo}
+        />
       </div>
     );
   }
